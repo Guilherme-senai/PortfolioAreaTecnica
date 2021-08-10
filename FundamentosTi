@@ -1,1 +1,23 @@
+$ cat comandos.txt
+Comando para descobrir nomes
+#!/bin/bash
+cut -d: -f1 /etc/passwd
+
+comando permisionalmeto
+#!/bin/bash
+var=$(ls -ld $1)
+
+tamr=${var: 7 : 1}
+tamw=${var: 8 : 1}
+tamx=${var: 9: 1}
+if [[$tamr == 'r' ]]
+echo tem escrita
+fi
+if [[$tamw == 'w' ]]
+echo tem leitura
+fi
+if [[$tamx == 'x' ]]
+then
+echo tem execução
+fi
 
