@@ -21,4 +21,17 @@ then
 echo tem execução
 fi
 
+#!/bin/bash
+echo "digite  seu ano de nascimento"
+read ano_nascimento
+echo " Escreva o ano atual :"
+read ano_atual
+
+idade=$((ano_atual - ano_nascimento))
+if [$idade -le 15]
+then
+echo" você pode votar"
+else
+echo " você deve votar"
+fi
 
