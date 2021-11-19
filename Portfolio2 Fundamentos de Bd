@@ -177,7 +177,10 @@ COD_AS NUMERIC(1)NOT NULL--Estrangeira 8
 	 Casa, 955345, 'Ter mais conhecimento e abilidade no trabalho', 1, 2,
 	 'Brasil',  'Santa Catarina', 'Florianópolis'),
    
-   Relacionamento entre tabelas
+   
+
+
+--Relacionamento entre tabelas--
 insert into categorias
 	(descrição, num_corredor)
 	values
