@@ -1,0 +1,95 @@
+Atividade de revisão
+create table departamento(
+	id int primary key,
+	nome varchar,
+	sigla varchar
+);
+
+create table funcionarios(
+	id int primary key,
+	nome varchar,
+	matricula int,
+	id_departamento int references departamento (id) 
+)
+select * from departamento  
+alter table departamento add column descricao varchar
+alter table funcionarios rename column nome to sigla
+
+insert into departamento
+(id , nome, sigla, descricao)
+values 
+(2, 'Tecnologia', 'ti', 'cuidar do computadores'),
+(3, 'faxineira', 'fx', 'manter o local limpo'),
+(4, 'garçom', 'gr', 'servir os clientes'),
+(5, 'gerencia', 'gc', 'gerenciar os outros funcionarios')
+
+insert into funcionarios
+(id , sigla, matricula, id_departamento)
+values
+(1, 'Pt', 11, 4),
+(2, 'bk', 22, 4),
+(3, 'gg', 33, 2),
+(4, 'cog', 44, 3),
+(5, 'ff', 55, 1),
+(6, 'mel', 66, 5),
+(7, 'aa', 77, 2),
+(8, 'ss', 88, 1),
+(9, 'jj', 99, 2),
+(10, 'sd', 1010, 4)
+select * from funcionarios 
+
+select * from funcionarios inner join departamento on funcionarios.id_departamento = departamento.id
+
+select * from funcionarios where sigla ilike '%a%'
+--------------------------------------------------------
+Atividade de fixação funções
+SQRT) select numero_filhos, tamanho_homem, sqrt(tamanho_homem) from hospital
+
+select numero_filhos, tamanho_homem, least (tamanho_homem) from hospital
+
+select position ('r' in 'ricardo')
+
+select to_char(CURRENT_DATE, '19/07/2012');
+
+select avg(preço) from roupas;
+
+
+
+create function minimo (valor_1 decimal(3,1), valor_2 decimal(3,1)) returns decimal as $$
+declare
+	minimo decimal(3,1);
+begin
+	if valor_1 > valor_2 then
+	return valor_1 ;
+	end if;
+	
+	if valor_1 < valor_2 then
+	return valor_2 ;
+	end if;
+	
+	if valor_1 = valor_2 then
+	return valor_1;
+	end if;
+end; $$
+language PLPGSQL;
+
+select minimo (9,5)
+------------------------------
+tabela compras
+create table compras(
+	data_venda date,
+	cod_roupa int,
+	cod_cliente int,
+	foreign key (cod_roupa) references roupas(cod),
+	foreign key (cod_cliente) references clientes(cod)
+);
+
+insert into vendas
+(data_venda, cod_roupa, cod_cliente)
+values
+('01/02/2022', 5, 1),
+('15/02/2022', 8, 2);
+
+select compras.data_compra, cliente.nome, cliente.telefone, roupas.modelo, roupas.preco from compras
+inner join clientes on compras.cod_cliente = clientes.cod
+inner join roupas on compras.cod_roupa = roupas.cod;
