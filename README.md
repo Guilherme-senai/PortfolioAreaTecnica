@@ -6,3 +6,4 @@ Sei usar o pacote office, basico de programação
 
 Banco de dados: https://github.com/Guilherme-senai/PortfolioAreaTecnica/blob/45ba3b4f87e96ef5fec7c3199c4c9b6de5ddb4cf/BancoDeDados
 Programação: https://github.com/Guilherme-senai/PortfolioAreaTecnica/blob/a4ae0bc3f4f4489d2672e8ac17d0d11043be098a/Programa%C3%A7%C3%A3oDeAplicativos
+Modelagem de Sistemas: https://github.com/Guilherme-senai/PortfolioAreaTecnica/blob/73be5d62a4bb1c5576185a4f06f5f6b96d44a7fe/ModelagemDeSistemas
