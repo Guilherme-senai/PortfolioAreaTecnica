@@ -1,5 +1,5 @@
 # PortfolioAreaTecnica
-portfolio ti 2a
+portfolio ti sou da 3a,
 Meu Nome é Guilherme Lima tenho 17 anos, esse é meu ultimo ano de ensino médio, gosto bastante da área de Ti até penso em seguir como profissão.
 Não tenho muita dificuldade nessa área, mas também não sei muita coisa sobre programação mas vou buscar aprender.
 Sei usar o pacote office, basico de programação
